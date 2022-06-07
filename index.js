@@ -3,7 +3,7 @@ const app=express()
 const mysql=require('mysql2')
 const cors=require('cors')
 //require("dotenv").config()
-const PORT=5000
+
 
 const db=mysql.createConnection({
     user:'root',
@@ -87,6 +87,6 @@ app.delete('/delete/:id',(req,res)=>{
     })
     
 })
-app.listen(process.env.PORT || PORT,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log("App running on server")
 })

@@ -7,10 +7,12 @@ const cors=require('cors')
 
 const db=mysql.createConnection({
     user:'root',
-    host:'localhost',
+    host:'34.132.124.163',
     password:'soumik',
-    database:'emp_db'
+    database:'emp_db',
+    socketPath: `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`
 })
+
 app.use(cors())
 app.use(express.json())
 
